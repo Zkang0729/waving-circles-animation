@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #9c27b0;
+}
+
+.loader {
+  position: relative;
+  width: 40rem;
+  height: 40rem;
+  transform-style: preserve-3d;
+  transform: perspective(50rem) rotateX(60deg);
+}
+
+.loader span {
+  position: absolute;
+  display: block;
+  border: 5px solid #fff;
+  box-shadow: 0 0.3rem 0 #ccc, inset 0 0.3rem 0 #ccc;
+  box-sizing: border-box;
+  border-radius: 50%;
+  animation: animate 2000ms ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%, 100% {
+    transform: translateZ(-10rem);
+  }
+
+  50% {
+    transform: translateZ(10rem);
+  }
+}
